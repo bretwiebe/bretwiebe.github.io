@@ -9,18 +9,29 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+       .codebox {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            color: black;
+            background: white;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+         </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="#page-top">Bret Wiebe</a>
+                <a class="navbar-brand" href="index.html">Bret Wiebe</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#port_folio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#port_folio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,84 +39,146 @@
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Bret Wiebe</h1>
-                <p class="lead">My github home to document my skills and development as a data analyst</p>
-                <a class="btn btn-lg btn-light" href="#about">Work in progess!</a>
+                <h1 class="fw-bolder">Winnipeg Mosquito Counts (May 4, 2015 - July 6, 2022)</h1>
+                <p class="lead">Data analysis to investigate possible relationships between mosquito counts and temperature & precipitation.</p>
+                <a class="btn btn-med btn-light" href="#datasource">Data Sources</a> <a class="btn btn-med btn-light" href="#dataprep">Data Prep</a> <a class="btn btn-med btn-light" href="#sql">SQL</a> <a class="btn btn-med btn-light" href="#tableau">Tableau</a> <a class="btn btn-med btn-light" href="#conclusions">Conclusions</a>
             </div>
         </header>
-        <!-- About section-->
-        <section id="about">
+        <!-- Data Sources section-->
+        <section class="bg-light" id="datasource">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>About me</h2>
-                        <a href="Coursera KJDPL6PGUNWH.pdf">Google Data Analytics</a> by Google on Coursera. Certificate earned July 7, 2022
-                        <p class="lead">Key skills I've learned through these courses, and continue to develop:</p>
+                        
+                        <h2>Data Sources</h2>
+                        <br>
+                        <p>
+                        Historical Climate Data [ <a href="https://climate.weather.gc.ca/index_e.html">https://climate.weather.gc.ca/index_e.html</a> ]
                         <ul>
-                            <li>R language</li>
-                            <li>SQL</li>
-                            <li>Google sheets and Excel</li>
+                        <li>
+                        Historical Data - Winnipeg A CS (Climate ID: 502S001) - downloaded Daily Data Reports for each year (2015-2022)
+                        </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio section-->
-        <section class="bg-light" id="port_folio">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>Portfolio</h2>
-                        <p class="lead">
+                        </p>
+                        <br>
+                        <p>
+                        City of Winnipeg Open Data Portal [ <a href="https://data.winnipeg.ca/">https://data.winnipeg.ca/</a> ]
                         <ul>
-                            <li><a href="casestudy_bikesharing_bw.html">Bikesharing Case Study</a> This is my capstone project for the Google Data Analytics Certificate.
+                        <li>
+                        Daily Adult Mosquito Trap Data - downloaded available data for period from May 4, 2015 to July 6, 2022
+                        </li>
                         </ul>
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Contact section-->
-        <section id="contact">
+        <!-- Data Prep section-->
+        <section class="bg-light" id="dataprep">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Contact me</h2>
-                        <p class="lead">
-                            <form method="post" action="https://forms.un-static.com/forms/60a462fc8ce6fb9fb5dff8e5179d80fb9708babd">
-                                <div class="form-group row">
-                                    <label for="name" class="col-4 col-form-label">Name</label>
-                                    <div class="col-8">
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                            <input name="name" placeholder="Fill in your name" type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="email" class="col-4 col-form-label">E-mail address</label>
-                                    <div class="col-8">
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                                            <input name="email" placeholder="Fill in your e-mail address" type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="message" class="col-4 col-form-label">Message</label>
-                                    <div class="col-8">
-                                        <textarea name="message" cols="40" rows="8" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="offset-4 col-8">
-                                        <button type="submit" class="btn btn-primary">Send</button>
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <p><small>(Powered by <a rel="nofollow" href="https://un-static.com">Un-static Forms</a>)</small></p>
-                                </div>
-                            </form>
+                        <h2>Data Prep</h2>
+                        <p>
+                        I used <b>LibreOffice Calc</b> spreadsheet to clean and prepare the data.
+                        <ul>
+                        <li>The 8 individual climate data files were combined into one .csv file.</li><br>
+                        <li>The climate data included some missing data indicated by "M". These values were replaced with "NULL".</li><br>
+                        <li>For this analysis only the Max Temp and Total Precip were of interest so the other climate data columns were deleted.</li><br>
+                        <li>The mosquito data file had columns for individual traps in the city but for this analysis only the citywide and 4 regional averages were considered.</li><br>
+                        <li>The date format in the mosquito data (DD/MM/YYYY) was not consistent with the date format in the climate data (YYYY-MM-DD) so it was converted using these formulas:<br>
+                        <img src="dateformat.png">
+                        </li>
+                        <br>
+                        <li>The mosquito data includes average counts for the NW, NE, SE, and SW regions of the city which have been retained for possible future use, but only the citywide average count was used in the visualizations. 
+                        </li><br>
+                        <li>The revised data files were saved as <b>wpg_15to22.csv</b> and <b>trap_avg1522.csv</b>.
+                        </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <!-- SQL section-->
+        <section class="bg-light" id="sql">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>SQL</h2>
+                        <p>I used <b>sqlite3</b> on my local PC to combine the two data sets into one data set to use for producing visualizations. 
+                        </p>
+<p>
+
+Opened database and created tables
+<div class="codebox">
+sqlite> .open mosquito<br>
+sqlite> CREATE TABLE wpg_clim (<br>
+   ...> obs_date VARCHAR(10),<br>
+   ...> max_temp NUMERIC,<br>
+   ...> total_precip NUMERIC);<br>
+sqlite> CREATE TABLE wpg_trap (<br>
+   ...> count_date VARCHAR(10),<br>
+   ...> citywide_average INTEGER,<br>
+   ...> nw_average INTEGER,<br>
+   ...> ne_average INTEGER,<br>
+   ...> se_average INTEGER,<br>
+   ...> sw_average INTEGER);<br>
+sqlite><br>
+</div><br>
+Imported data from .csv files
+<div class="codebox">
+sqlite> .mode csv<br>
+sqlite> .separator ,<br>
+sqlite> .import /home/bret/Downloads/wpg_15to22.csv wpg_clim<br>
+sqlite> .import /home/bret/Downloads/trap_avg1522.csv wpg_trap<br>
+sqlite><br>
+</div><br>
+Performed inner join to create .csv for creating visualizations
+<div class="codebox">
+sqlite> .header on<br>
+sqlite> .mode csv<br>
+sqlite> .output /home/bret/Downloads/cityavgtrapdata.csv<br>
+sqlite> SELECT<br>
+   ...> count_date, citywide_average, max_temp, total_precip<br>
+   ...> FROM<br>
+   ...> wpg_trap JOIN wpg_clim<br>
+   ...> ON<br>
+   ...> count_date = obs_date;<br>
+sqlite><br>
+</div>
+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Tableau section-->
+        <section class="bg-light" id="tableau">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Tableau</h2>
+                        <p>
+                        The file <b>cityavgtrapdata.csv</b> was uploaded to Tableau Public. Two visualizations were created to explore any relationships or noticeable trends between mosquito counts and temperature and precipitation. The visualizations are viewable 
+                        <a href="https://public.tableau.com/views/WinnipegMosquitoTrapCounts2015-2022/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link">here</a> or directly below. The lists on the right side of the screen may be used to view data from various years.<br>
+                        <div class='tableauPlaceholder' id='viz1657832718425' style='position: relative'><noscript><a href='#'><img alt='Winnipeg Mosquito Counts (May 4, 2015 - July 6, 2022) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;WinnipegMosquitoTrapCounts2015-2022&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WinnipegMosquitoTrapCounts2015-2022&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;WinnipegMosquitoTrapCounts2015-2022&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1657832718425');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Conclusions section-->
+        <section class="bg-light" id="conclusions">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Conclusions</h2>
+                        <p>
+                        The temperature visualizations for each year have a fairly consistent trend line. The precipitation visualizations show more variety in trend lines. This is likely due to the many days each month with zero precipitation that still have a wide range of mosquito counts.
+                        </p>
+                        <p>
+                        This analysis ignores other possible influences on observed counts such as the larvaciding and fogging programs that the city employs to control mosquito levels. To fully determine the relationships between mosquitoes and temp/precip a more indepth analysis would be required that considered these other factors.
                         </p>
                     </div>
                 </div>
